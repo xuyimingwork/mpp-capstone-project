@@ -2,14 +2,26 @@
   <!-- rubric43 The user should see a button labeled “Back” -->
   <!-- rubric45 Clicking the “Back” button should take the user back to where they came from, 
     whether it was the Shopping page or the Product Page -->
-  <button type="button" class="btn btn-outline-primary" routerLink="..">BACK</button>
-  <div class="row">
+  <button type="button" class="btn btn-outline-primary" (click)="back()">BACK</button>
+  <div *ngIf="item" class="row">
     <!-- rubric36 The user should an image of the selected product -->
     <div class="col">
-      Image
+      <img height="600px" [src]="item.imagelink" [alt]="item.name">
     </div>
     <div class="col">
-      detail
+      <h2>{{ item.name }}</h2>
+      <h3>Rating: {{ item.rating }} / 5</h3>
+      <p>Stock: {{ item.stock }}</p>
+      <p>${{ item.price }}</p>
+      <p>{{ item.description }}</p>
+      <form class="form-inline">
+          <div class="form-group">
+            <label>Qty
+              <input type="number" name="qty" class="form-control" [(ngModel)]="qty">
+            </label>
+          </div>
+          <button type="button" class="btn btn-outline-primary ml-1" (click)="add()">Add</button>
+        </form>
     </div>
   </div>
 </div>
