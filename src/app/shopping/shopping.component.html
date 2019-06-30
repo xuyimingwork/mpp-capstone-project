@@ -1,1 +1,59 @@
-<p>shopping works!</p>
+<div class="container">
+  <!-- rubric14 The user shall see a controls bar -->
+  <div class="row">
+    <!-- rubric15 The user shall see a section in the controls bar that displays the selected category name -->
+    <!-- rubric16 The user shall see a section in the controls bar that displays the number of items 
+      shown out of the total number of items in the selected category  -->
+    <div class="col">
+      Showing {{ 9 }} of {{ 9 }} items in {{ 'lalal' }}
+    </div>
+    <form class="col form-inline justify-content-end">
+      <!-- rubric17 The user shall see a toggle switch labeled “In Stock Only” in the controls bar -->
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          In Stock Only:
+          <input class="form-check-input" type="checkbox" value="">
+        </label>
+      </div>
+      <!-- rubric18 The user shall see a dropdown list labeled “Sort By” that has the following options: 
+        (None, Price, Alphabetical, Rating) in the controls bar  -->
+      <div class="form-group">
+        <label>Sort by:
+          <select class="form-control">
+            <option value="" disabled selected>None</option>
+            <option value="price">Price</option>
+            <option value="alphabetical">Alphabetical</option>
+            <option value="rating">Rating</option>
+          </select>
+        </label>
+      </div>
+    </form>
+  </div>
+
+  <div class="row">
+    <!-- rubric19 The user shall see a category menu that displays all of the 
+      available shopping categories -->
+    <div class="col-3">
+      menu
+    </div>
+    <!-- rubric20 The user shall see a grid that is populated with the products of the selected category -->
+    <div class="col">
+      <div class="row">
+        <!-- rubric21 Each grid cell shall have the name of the product displayed -->
+        <!-- rubric22 Each grid cell shall have the price of the product displayed -->
+        <!-- rubric23 Each grid cell shall have an image of the product displayed -->
+        <!-- rubric24 Each grid cell shall have a button labeled “Add” -->
+        <div class="col-3">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">title</h5>
+              <p class="card-text">price</p>
+              <button class="btn btn-primary">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
