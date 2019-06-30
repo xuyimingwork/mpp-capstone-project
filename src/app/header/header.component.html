@@ -1,1 +1,30 @@
-<p>header works!</p>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/">Grocery Cloud</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#app-header-navbar-collapse"
+      aria-controls="app-header-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="app-header-navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <!-- rubric65 User shall see a link to the home page -->
+        <li class="nav-item">
+          <!-- rubric69 Clicking the home page link should take the user to the home page -->
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <!-- rubric66 User shall see a link to the shopping page -->
+        <li class="nav-item">
+          <!-- rubric70 Clicking the shopping page link should take the user to the shopping page -->
+          <a class="nav-link" routerLink="/shopping">Shopping</a>
+        </li>
+        <!-- rubric67 User shall see a link to the cart page  -->
+        <li class="nav-item">
+          <!-- rubric71 Clicking the cart page link should take the user to the cart page -->
+          <a class="nav-link" routerLink="/cart">Cart</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
