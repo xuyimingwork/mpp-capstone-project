@@ -1,1 +1,42 @@
-<p>contact works!</p>
+<div class="container">
+  <div class="row">
+    <!-- rubric57 The user should see a form with text input fields for name and
+      email, a dropdown list for subject, and a text area for a message.
+      These fields should have placeholders to show what they
+      represent 
+    -->
+    <div class="col">
+      <form>
+        <div class="form-group">
+          <label for="app-contact-form-input-name">Name</label>
+          <input type="text" class="form-control" id="app-contact-form-input-name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="app-contact-form-input-email">Email</label>
+          <input type="email" class="form-control" id="app-contact-form-input-email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="app-contact-form-input-subject">Subject</label>
+          <select class="form-control" id="app-contact-form-input-subject">
+            <option value="" disabled selected>-- Select Subject --</option>
+            <option>Subject One</option>
+            <option>Subject Two</option>
+            <option>Subject Three</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="app-contact-form-input-message">Message</label>
+          <textarea class="form-control" id="app-contact-form-input-message"></textarea>
+        </div>
+        <!-- rubric59 The user should see a button labeled “Send” -->
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+    <!-- rubric58 The user should see description that shows an email and phone number for the contacting the business -->
+    <div class="col">
+      <p>Have questions about Grocery Cloud? Feel free to contack us!</p>
+      <p class="mb-0">Email: grocerycloud@outlook.com</p>
+      <p>Phone: 123-456-7890</p>
+    </div>
+  </div>
+</div>
