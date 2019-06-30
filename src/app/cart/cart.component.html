@@ -1,1 +1,75 @@
-<p>cart works!</p>
+<div class="container">
+  <div class="row">
+    <!-- rubric47 The user should a table displaying the product image, name, unit price, quantity 
+      as an input field, total cost, and a remove button for each product in the shopping cart. -->
+    <div class="col-8">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="text-center" scope="col">Image</th>
+            <th class="text-center" scope="col">Name</th>
+            <th class="text-right" scope="col">Unit Price</th>
+            <th class="text-center" scope="col">Qty</th>
+            <th class="text-right" scope="col">Cost</th>
+            <th class="text-center" scope="col">Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">image</td>
+            <td class="text-center">name</td>
+            <td class="text-right">price</td>
+            <td class="text-center"><input type="number"></td>
+            <td class="text-right">cost</td>
+            <td class="text-center">
+              <button type="button" class="btn btn-sm btn-outline-primary">
+                <i class="fas fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="col-4">
+      <!-- rubric48 The user should see a form labeled “Enter Shipping Details” that 
+      has text input fields for the users name, address, city, and phone number. 
+      These input fields should have placeholders that show what they represent -->
+      <div>
+        <h2>Enter Shipping Details</h2>
+        <form>
+          <div class="form-group">
+            <label class="d-block">
+              <input type="text" class="form-control" placeholder="Name">
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="d-block">
+              <input type="text" class="form-control" placeholder="Address">
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="d-block">
+              <input type="text" class="form-control" placeholder="City">
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="d-block">
+              <input type="text" class="form-control" placeholder="Phone Number">
+            </label>
+          </div>
+        </form>
+      </div>
+      <!-- The user should see a section showing the subtotal cost of all the items in the shopping cart, 
+        the shipping cost, the tax cost, and a total cost of all of the items in the shipping cost. -->
+      <div>
+        <p class="mb-1"><span class="font-weight-bold">Subtotal: </span></p>
+        <p class="mb-1"><span class="font-weight-bold">Shipping: </span></p>
+        <p class="mb-3"><span class="font-weight-bold">Tax(10%): </span></p>
+        <p><span class="font-weight-bold">Total: </span></p>
+      </div>
+      <!-- rubric50 The user should see a checkout button -->
+      <button type="button" class="btn btn-outline-primary">CHECKOUT</button>
+    </div>
+  </div>
+</div>
