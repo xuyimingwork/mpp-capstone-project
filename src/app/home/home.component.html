@@ -24,27 +24,56 @@
       <div class="carousel-item active">
         <div class="row">
           <div class="col">
-            One
+            <a *ngIf="items && items[0]" [routerLink]="getItemRouterLink(items[0])">
+              <img  height="600px"
+                [src]="items[0].imagelink" [alt]="items[0].name">
+            </a>
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <div class="row">
           <div class="col border-right border-dark">
-            1 of 2
+            <a *ngIf="items && items[1]" [routerLink]="getItemRouterLink(items[1])">
+              <img  height="600px"
+                [src]="items[1].imagelink" [alt]="items[1].name">
+            </a>
           </div>
           <div class="col">
-            2 of 2
+            <a *ngIf="items && items[2]" [routerLink]="getItemRouterLink(items[2])">
+              <img  height="600px"
+                [src]="items[2].imagelink" [alt]="items[2].name">
+            </a>
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <div class="row">
-          <div class="col border-right border-bottom border-dark">col</div>
-          <div class="col border-bottom border-dark">col</div>
+          <div class="col border-right border-bottom border-dark">
+            <a *ngIf="items && items[3]" [routerLink]="getItemRouterLink(items[3])">
+              <img  height="300px"
+                [src]="items[3].imagelink" [alt]="items[3].name">
+            </a>
+          </div>
+          <div class="col border-bottom border-dark">
+            <a *ngIf="items && items[4]" [routerLink]="getItemRouterLink(items[4])">
+              <img  height="300px"
+                [src]="items[4].imagelink" [alt]="items[4].name">
+            </a>
+          </div>
           <div class="w-100"></div>
-          <div class="col border-right border-dark">col</div>
-          <div class="col">col</div>
+          <div class="col border-right border-dark">
+            <a *ngIf="items && items[5]" [routerLink]="getItemRouterLink(items[5])">
+              <img  height="300px"
+                [src]="items[5].imagelink" [alt]="items[5].name">
+            </a>
+          </div>
+          <div class="col">
+            <a *ngIf="items && items[6]" [routerLink]="getItemRouterLink(items[6])">
+              <img  height="300px"
+                [src]="items[6].imagelink" [alt]="items[6].name">
+            </a>
+          </div>
         </div>
       </div>
     </div>
