@@ -17,7 +17,7 @@ const routes: Routes = [
     component: ShoppingComponent
   },
   {
-    path: 'product',
+    path: 'product/:category/:subcategory/:name',
     component: ProductComponent
   },
   {
