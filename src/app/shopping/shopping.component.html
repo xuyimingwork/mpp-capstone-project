@@ -5,7 +5,7 @@
     <!-- rubric16 The user shall see a section in the controls bar that displays the number of items 
       shown out of the total number of items in the selected category  -->
     <div class="col">
-      Showing {{ 0 }} of {{ 9 }} items in {{ 'lalal' }}
+      Showing {{ (items | productFilter:'stock':'!=':isInStockOnly ? '0' : '').length }} of {{ items ? items.length : 0 }} items in {{ 'all categories' }}
     </div>
     <form class="col form-inline justify-content-end">
       <!-- rubric17 The user shall see a toggle switch labeled “In Stock Only” in the controls bar -->

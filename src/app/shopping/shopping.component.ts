@@ -8,6 +8,8 @@ import { DataItem } from '../data-item';
   styleUrls: ['./shopping.component.css']
 })
 export class ShoppingComponent implements OnInit {
+  currentSubcategory: string;
+  isInStockOnly = false;
   items: Array<DataItem>;
 
   constructor(private dataService: DataService) { }
