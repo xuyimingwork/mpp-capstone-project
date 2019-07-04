@@ -5,14 +5,14 @@
     <!-- rubric16 The user shall see a section in the controls bar that displays the number of items 
       shown out of the total number of items in the selected category  -->
     <div class="col">
-      Showing {{ 9 }} of {{ 9 }} items in {{ 'lalal' }}
+      Showing {{ 0 }} of {{ 9 }} items in {{ 'lalal' }}
     </div>
     <form class="col form-inline justify-content-end">
       <!-- rubric17 The user shall see a toggle switch labeled “In Stock Only” in the controls bar -->
       <div class="form-check form-check-inline">
         <label class="form-check-label">
           In Stock Only:
-          <input class="form-check-input" type="checkbox" value="">
+          <input name="in-stock-only" class="form-check-input" type="checkbox" [(ngModel)]="isInStockOnly">
         </label>
       </div>
       <!-- rubric18 The user shall see a dropdown list labeled “Sort By” that has the following options: 
@@ -43,13 +43,23 @@
         <!-- rubric22 Each grid cell shall have the price of the product displayed -->
         <!-- rubric23 Each grid cell shall have an image of the product displayed -->
         <!-- rubric24 Each grid cell shall have a button labeled “Add” -->
-        <div *ngFor="let item of items" class="col-3 mb-3">
+        <!-- rubric29 If the “In Stock Only” toggle is checked, only items that 
+          are in stock should be shown in the products grid. -->
+        <div *ngFor="let item of items | productFilter:'stock':'!=':isInStockOnly ? '0' : ''" class="col-3 mb-3">
           <div class="card">
-            <img  height="100px" [src]="item.imagelink" [alt]="item.name">
+            <!-- rubric31 If the user clicks on a product image within a grid cell, they should be 
+              taken to a product page that is populated with the details of the clicked product -->
+            <a [routerLink]="['/product', item.category, item.subcategory, item.name]">
+              <img  height="100px" [src]="item.imagelink" [alt]="item.name">
+            </a>
             <div class="card-body">
-              <h5 class="card-title">{{ item.name }}</h5>
+              <!-- rubric32 If the user clicks on a product name within a grid cell, they should be 
+                taken to a product page that is populated with the details of the clicked product  -->
+              <h5 class="card-title">
+                <a [routerLink]="['/product', item.category, item.subcategory, item.name]">{{ item.name }}</a>
+              </h5>
               <p class="card-text">${{ item.price }}</p>
-              <button class="btn btn-primary">Add</button>
+              <button class="btn btn-primary" [disabled]="item.stock === '0'">Add</button>
             </div>
           </div>
         </div>
